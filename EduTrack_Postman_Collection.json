@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "EduTrack - School Management System",
+    "description": "API collection for EduTrack providing Add School and List Schools capabilities.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add School",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Springfield High School\",\n  \"address\": \"123 Education Lane\",\n  \"latitude\": 40.7128,\n  \"longitude\": -74.0060\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "addSchool"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Nearest Schools",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/listSchools?latitude=40.7306&longitude=-73.9352",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "40.7306"
+            },
+            {
+              "key": "longitude",
+              "value": "-73.9352"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
